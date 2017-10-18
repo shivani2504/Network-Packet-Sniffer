@@ -7,19 +7,16 @@ The program has the following specification:
 
 mydump [-i interface] [-r file] [-s string] expression
 
--i  Live capture from the network device <interface> (e.g., eth0). If not
-    specified, mydump should automatically select a default interface to
-    listen on (hint 1). Capture should continue indefinitely until the user
-    terminates the program.
+-i  Live capture from the network device 'interface' (e.g., eth0). If not
+    specified, mydump will automatically select a default interface to
+    listen on. 
 
--r  Read packets from <file> in tcpdump format (hint 2).
+-r  Read packets from 'file' in tcpdump format.
 
--s  Keep only packets that contain <string> in their payload (after any BPF
-    filter is applied). You are not required to implement wildcard or regular
-    expression matching. A simple string matching operation should suffice
-    (hint 3).
+-s  Display packets that contain 'string' in their payload (after any BPF
+    filter is applied). 
 
-<expression> is a BPF filter that specifies which packets will be dumped. If
+'expression' is a BPF filter that specifies which packets will be dumped. If
 no filter is given, all packets seen on the interface (or contained in the
 trace) should be dumped. Otherwise, only packets matching <expression> should
 be dumped.
